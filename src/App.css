@@ -9,7 +9,6 @@
 }
 button{
   position: absolute;
-<<<<<<< HEAD
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
@@ -17,23 +16,12 @@ button{
   background-color: transparent;
   border: 1px solid black;
   border-radius: 10px;
-=======
-  top: 50px;
-  left: 50px;
-  padding: 5px 20px;
-  background-color: transparent;
-  border: 1px solid black;
->>>>>>> 808adc6df4a9fcca64f4f1b5f8adab8d9680cb38
   cursor: pointer;
 
 }
 .summary{
   position: absolute;
-<<<<<<< HEAD
   left: 50px;
-=======
-  left: 0;
->>>>>>> 808adc6df4a9fcca64f4f1b5f8adab8d9680cb38
   bottom: 50px;
 }
 .wrapper{
@@ -52,7 +40,6 @@ button{
   font-size: 320px;
   transition: opacity 1s ease-in-out;
   opacity: 0;
-<<<<<<< HEAD
 }
 
 .symbol.show {
@@ -60,10 +47,6 @@ button{
 }
 
 
-ul{
-  list-style-type: none;
-  
-}
 li{
   display: flex;
   justify-content: space-between;
@@ -78,7 +61,7 @@ li{
 }
 .number{
   font-size: 16px;
-  width: max-content;
+  
   width: 30px;
   text-align: center;
   border: none;
@@ -98,7 +81,6 @@ input[type='number']::-webkit-inner-spin-button {
 /* Firefox */
 input[type='number'] {
   -moz-appearance: textfield;
-=======
 }
 .symbol1{
   width: max-content;
@@ -113,10 +95,4 @@ input[type='number'] {
 ul{
   list-style-type: none;
   gap: 15px;
->>>>>>> 808adc6df4a9fcca64f4f1b5f8adab8d9680cb38
-}
-.number{
-  border: none;
-  border-bottom: 1px solid black;
-  width: max-content;
 }

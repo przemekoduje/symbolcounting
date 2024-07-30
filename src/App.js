@@ -14,13 +14,10 @@ const App = () => {
     acc[symbol] = '';
     return acc;
   }, {}));
-<<<<<<< HEAD
   const [inputColors, setInputColors] = useState(symbols.reduce((acc, symbol) => {
     acc[symbol] = 'white';
     return acc;
   }, {}));
-=======
->>>>>>> 808adc6df4a9fcca64f4f1b5f8adab8d9680cb38
   const [sessionEnded, setSessionEnded] = useState(false);
   const [allInputsFilled, setAllInputsFilled] = useState(false);
 
@@ -28,11 +25,7 @@ const App = () => {
     return symbols[Math.floor(Math.random() * symbols.length)];
   };
 
-<<<<<<< HEAD
   const easy = true;
-=======
-  const easy = false;
->>>>>>> 808adc6df4a9fcca64f4f1b5f8adab8d9680cb38
 
   const generateSymbols = () => {
     // Resetowanie wszystkich ustawień
@@ -53,18 +46,12 @@ const App = () => {
     setSessionEnded(false);
     setAllInputsFilled(false);
 
-
     const newSymbols = [];
     for (let i = 0; i < 20; i++) {
       newSymbols.push({
         symbol: getRandomSymbol(),
         left: easy ? '0px' : Math.random() * 300 + 'px',
         top: easy ? '0px' : Math.random() * 300 + 'px',
-<<<<<<< HEAD
-=======
-        // left: '0',
-        // top: '0',
->>>>>>> 808adc6df4a9fcca64f4f1b5f8adab8d9680cb38
         key: i
       });
     }
@@ -84,10 +71,6 @@ const App = () => {
       }, index * 1500);
     });
 
-<<<<<<< HEAD
-=======
-    // Ustawienie sesji jako zakończonej po wyświetleniu wszystkich symboli
->>>>>>> 808adc6df4a9fcca64f4f1b5f8adab8d9680cb38
     setTimeout(() => {
       setSessionEnded(true);
     }, newSymbols.length * 1500 + 1000);
@@ -101,7 +84,6 @@ const App = () => {
   }, [userCounts, sessionEnded]);
 
   const handleInputChange = (symbol) => (e) => {
-<<<<<<< HEAD
     const value = e.target.value;
     setUserCounts({
       ...userCounts,
@@ -113,22 +95,11 @@ const App = () => {
       [symbol]: parseInt(value) === symbolCounts[symbol] ? 'white' : 'black'
     });
   };
-=======
-    setUserCounts({
-      ...userCounts,
-      [symbol]: e.target.value
-    });
-  };
-
-
-
->>>>>>> 808adc6df4a9fcca64f4f1b5f8adab8d9680cb38
 
   return (
     <div className="App">
       <button onClick={generateSymbols}>Start</button>
       {sessionEnded && (
-<<<<<<< HEAD
         <div className="summary">
           <ul>
             {symbols.map(symbol => (
@@ -156,41 +127,6 @@ const App = () => {
           ))}
         </div>
       </div>
-=======
-          <div className="summary">
-            <ul>
-              {symbols.map(symbol => (
-                <li key={symbol}>
-                  {symbol}:
-                  <input
-                    className='number'
-                    type="number"
-                    value={userCounts[symbol]}
-                    onChange={handleInputChange(symbol)}
-                    min="0"
-                  />
-                  {allInputsFilled && (
-                    <span> {symbolCounts[symbol]}</span>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-      <div className='wrapper'>
-        
-        <div className="symbols">
-          {showSymbols.map(({ symbol, left, top, key }) => (
-            <div key={key} className={`symbol show`} style={{ left, top }}>
-              {symbol}
-            </div>
-          ))}
-        </div>
-        
-      </div>
-
-
->>>>>>> 808adc6df4a9fcca64f4f1b5f8adab8d9680cb38
     </div>
   );
 };
