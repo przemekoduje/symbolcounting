@@ -47,14 +47,14 @@ const App = () => {
 
         setTimeout(() => {
           setShowSymbols([]);
-        }, 1000);
-      }, index * 1500);
+        }, 2000);
+      }, index * 3000);
     });
 
     // Ustawienie sesji jako zakończonej po wyświetleniu wszystkich symboli
     setTimeout(() => {
       setSessionEnded(true);
-    }, newSymbols.length * 1500 + 1000);
+    }, newSymbols.length * 3000 + 1000);
   };
 
   useEffect(() => {
